@@ -225,3 +225,17 @@ ggplot(sleep, aes(x = ID, y = extra, fill = group)) + geom_bar(stat = "identity"
 
 ggplot(sleep, aes(x = ID, y = extra, fill = group)) + geom_histogram()
 ggplot(sleep, aes(x = ID, y = extra, fill = group)) + geom_freqpoly()
+
+sir <- read.csv('sir.csv', stringsAsFactors = F)
+summary(sir)
+head(sir)
+ggplot(sir, aes(x=Wkts)) + geom_bar()
+
+
+sir_innings_wkts <- sir %>% group_by(Inns) %>% summarise(median(Wkts))
+sir_innings_wkts <- sir %>% group_by(Inns) %>% summarise(mean(Wkts))
+
+ggplot(sir, aes(x = as.factor(Inns), y = Wkts)) + geom_boxplot()
+
+
+ggplot(sir,aes(x=Mdns, y=Econ))+geom_point()+geom_smooth()
