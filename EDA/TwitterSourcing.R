@@ -3,10 +3,10 @@ install.packages("twitteR")
 require("twitteR")   
 #Connect with Twitter API using below 
 options(httr_oauth_cache=T)
-consumer_key    = 'u2bX0cECiwe8Vjk9NhHG5x518'
-consumer_secret = 'F1lZY6yXtrafqq3V7tsXSi1VMrahwzmZhMhjuJPyHPV9dWu1sh'
-access_token    = '858753424271196162-G0RgoAiNLOM2nKYvntijxWwu6eSOHJE'
-access_secret   = 'Mxwwz8QS8cGmQXWKGTmCd2ZJNBb9F5BMTZc1xCeGQzxX3'
+consumer_key    = ''
+consumer_secret = ''
+access_token    = ''
+access_secret   = ''
 download.file(url="http://curl.haxx.se/ca/cacert.pem",destfile="cacert.pem")
 setup_twitter_oauth(consumer_key,consumer_secret,access_token,access_secret)
 
